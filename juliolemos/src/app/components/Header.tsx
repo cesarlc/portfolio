@@ -91,7 +91,7 @@ export function Header() {
           {/* Logo */}
           {isDesktop ?
             (<Typography variant="h6" sx={{ fontWeight: 700, color: 'primary.main' }}>
-              JL
+              Julio Lemos
             </Typography>) 
             : <LanguageSwitcher />}
 

@@ -11,11 +11,14 @@ import {
   List,
   ListItemButton,
   ListItemText,
+  Menu,
+  MenuItem,
 } from '@mui/material';
 import { useEffect, useState, type MouseEvent } from 'react';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Hero from './Hero';
 import About from './About';
 import Skills from './Skills';
@@ -24,8 +27,15 @@ import Tools from './Tools';
 import Projects from './Projects';
 import Contact from './Contact';
 import type { Language } from '../i18n';
+import flagBr from '../../assets/icons/flag-br.svg';
+import flagUs from '../../assets/icons/flag-us.svg';
 
 const languageStorageKey = 'portfolio-language';
+
+const languageOptions: Array<{ value: Language; label: string; flag: string; flagAlt: string }> = [
+  { value: 'pt', label: 'Português', flag: flagBr, flagAlt: 'Bandeira do Brasil' },
+  { value: 'en', label: 'English', flag: flagUs, flagAlt: 'Bandeira dos Estados Unidos' },
+];
 
 function getInitialLanguage(): Language {
   if (typeof window === 'undefined') {
@@ -123,6 +133,7 @@ function ScrollTop() {
 export default function Portfolio() {
   const [language, setLanguage] = useState<Language>(getInitialLanguage);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [languageMenuAnchor, setLanguageMenuAnchor] = useState<null | HTMLElement>(null);
 
   useEffect(() => {
     window.localStorage.setItem(languageStorageKey, language);
@@ -163,6 +174,20 @@ export default function Portfolio() {
     { id: 'projects', label: text.projects },
     { id: 'lets-talk', label: text.contact },
   ];
+  const currentLanguage = languageOptions.find((option) => option.value === language) ?? languageOptions[0];
+
+  const openLanguageMenu = (event: MouseEvent<HTMLElement>) => {
+    setLanguageMenuAnchor(event.currentTarget);
+  };
+
+  const closeLanguageMenu = () => {
+    setLanguageMenuAnchor(null);
+  };
+
+  const selectLanguage = (selectedLanguage: Language) => {
+    setLanguage(selectedLanguage);
+    closeLanguageMenu();
+  };
 
   return (
     <Box sx={{ backgroundColor: '#120822', overflowX: 'hidden' }}>
@@ -237,22 +262,88 @@ export default function Portfolio() {
               </Button>
               <Button
                 aria-label={text.languageLabel}
-                onClick={() => setLanguage((current) => (current === 'pt' ? 'en' : 'pt'))}
+                aria-controls={languageMenuAnchor ? 'language-menu' : undefined}
+                aria-haspopup="true"
+                aria-expanded={languageMenuAnchor ? 'true' : undefined}
+                onClick={openLanguageMenu}
+                endIcon={<KeyboardArrowDownIcon />}
                 sx={{
                   textTransform: 'none',
                   fontSize: '1rem',
                   color: '#ffffff',
                   border: '1px solid rgba(255,255,255,0.35)',
-                  minWidth: 64,
-                  px: 1.5,
+                  minWidth: 70,
+                  px: 1.25,
+                  gap: 0.5,
                 }}
               >
-                {language === 'pt' ? 'EN' : 'PT'}
+                <Box
+                  component="img"
+                  src={currentLanguage.flag}
+                  alt={currentLanguage.flagAlt}
+                  sx={{
+                    width: 26,
+                    height: 18,
+                    borderRadius: '2px',
+                    objectFit: 'cover',
+                    boxShadow: '0 0 0 1px rgba(255,255,255,0.35)',
+                  }}
+                />
               </Button>
             </Box>
           </Toolbar>
         </Container>
       </AppBar>
+
+      <Menu
+        id="language-menu"
+        anchorEl={languageMenuAnchor}
+        open={Boolean(languageMenuAnchor)}
+        onClose={closeLanguageMenu}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+        PaperProps={{
+          sx: {
+            mt: 1,
+            minWidth: 170,
+            backgroundColor: '#1d1031',
+            color: '#ffffff',
+            border: '1px solid rgba(255,255,255,0.16)',
+            borderRadius: 2,
+          },
+        }}
+      >
+        {languageOptions.map((option) => (
+          <MenuItem
+            key={option.value}
+            selected={option.value === language}
+            onClick={() => selectLanguage(option.value)}
+            sx={{
+              gap: 1.25,
+              '&.Mui-selected': {
+                backgroundColor: 'rgba(255, 83, 20, 0.18)',
+              },
+              '&.Mui-selected:hover, &:hover': {
+                backgroundColor: 'rgba(255, 83, 20, 0.28)',
+              },
+            }}
+          >
+            <Box
+              component="img"
+              src={option.flag}
+              alt={option.flagAlt}
+              sx={{
+                width: 26,
+                height: 18,
+                borderRadius: '2px',
+                objectFit: 'cover',
+                boxShadow: '0 0 0 1px rgba(255,255,255,0.24)',
+              }}
+            />
+            <Box component="span">{option.label}</Box>
+          </MenuItem>
+        ))}
+      </Menu>
 
       <Drawer
         anchor="right"
@@ -282,14 +373,33 @@ export default function Portfolio() {
             </ListItemButton>
           ))}
           <ListItemButton
-            onClick={() => setLanguage((current) => (current === 'pt' ? 'en' : 'pt'))}
+            onClick={openLanguageMenu}
             sx={{
               mt: 1,
               borderRadius: 2,
               border: '1px solid rgba(255,255,255,0.24)',
             }}
           >
-            <ListItemText primary={`${text.languageLabel}: ${language === 'pt' ? 'English' : 'Português'}`} />
+            <ListItemText
+              primary={
+                <Box component="span" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                  <Box
+                    component="img"
+                    src={currentLanguage.flag}
+                    alt={currentLanguage.flagAlt}
+                    sx={{
+                      width: 26,
+                      height: 18,
+                      borderRadius: '2px',
+                      objectFit: 'cover',
+                      boxShadow: '0 0 0 1px rgba(255,255,255,0.24)',
+                    }}
+                  />
+                  {`${text.languageLabel}: ${currentLanguage.label}`}
+                </Box>
+              }
+            />
+            <KeyboardArrowDownIcon fontSize="small" />
           </ListItemButton>
         </List>
       </Drawer>
