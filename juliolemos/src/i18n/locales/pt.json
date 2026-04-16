@@ -1,0 +1,96 @@
+{
+  "header": {
+    "about": "Sobre",
+    "experience": "Experiência",
+    "skills": "Skills",
+    "contact": "Contato"
+  },
+  "hero": {
+    "greeting": "Olá, meu nome é",
+    "name": "Julio Lemos",
+    "title": "QA Engineer Pleno",
+    "description": "Especializado em testes manuais e automatizados, garantindo a qualidade e confiabilidade de aplicações web. Experiência com Playwright, Cypress, Selenium e ferramentas modernas de QA.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "paragraph1": "Sou um QA Engineer com experiência em garantir a qualidade de aplicações web através de testes manuais e automatizados. Trabalho com metodologias ágeis e tenho uma abordagem proativa na identificação de problemas.",
+    "paragraph2": "Minha experiência inclui testes em ambientes de Banking as a Service (BaaS), validação de integrações através de análise de logs de rede, e desenvolvimento de suites de testes automatizados que reduziram significativamente o tempo de execução.",
+    "paragraph3": "Tenho expertise em JavaScript e Python, além de experiência com ferramentas modernas de automação e APIs REST. Busco constantemente melhorar processos e contribuir para a estabilidade dos produtos.",
+    "highlights": {
+      "manual": {
+        "title": "Testes Manuais",
+        "description": "Validação detalhada de funcionalidades e fluxos de usuário"
+      },
+      "automation": {
+        "title": "Automação de Testes",
+        "description": "Desenvolvimento de scripts com Playwright, Cypress e Selenium"
+      },
+      "api": {
+        "title": "API Testing",
+        "description": "Testes de integração e validação com Postman e Swagger"
+      }
+    }
+  },
+  "experience": {
+    "title": "Experiência Profissional",
+    "current": "Atual",
+    "previous": "Experiência Anterior",
+    "achievements": "Principais Conquistas:",
+    "bmp": {
+      "company": "BMP Money Plus",
+      "role": "QA Analyst",
+      "description": "Testes em ambiente Banking as a Service (BaaS) focado em funcionalidades de crédito.",
+      "achievements": [
+        "Testes manuais de funcionalidades relacionadas a crédito",
+        "Validação de implementações frontend e fluxos de usuário",
+        "Análise de requests e responses através de logs de rede",
+        "Testes de API com Postman e Swagger",
+        "Identificação de bugs e sugestões de melhorias"
+      ]
+    },
+    "sheetgo": {
+      "company": "Sheetgo",
+      "role": "QA Engineer",
+      "description": "Testes manuais e automatizados para garantir a qualidade do software.",
+      "achievements": [
+        "Implementação de testes automatizados com redução significativa no tempo de execução",
+        "Identificação proativa de defeitos durante o desenvolvimento",
+        "Colaboração efetiva com desenvolvedores para resolução de problemas"
+      ]
+    }
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "categories": {
+      "automation": "Automação de Testes",
+      "languages": "Linguagens",
+      "tools": "Ferramentas & API Testing",
+      "methodologies": "Metodologias & Processos"
+    },
+    "levels": {
+      "basic": "Básico",
+      "intermediate": "Intermediário",
+      "advanced": "Avançado"
+    }
+  },
+  "contact": {
+    "title": "Vamos Conversar?",
+    "description": "Estou sempre aberto a novas oportunidades e colaborações. Entre em contato através das plataformas abaixo!",
+    "linkedin": {
+      "title": "LinkedIn",
+      "description": "Conecte-se comigo no LinkedIn",
+      "button": "Ver Perfil"
+    },
+    "github": {
+      "title": "GitHub",
+      "description": "Confira meus projetos e contribuições",
+      "button": "Ver GitHub"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Julio Lemos - QA Engineer",
+    "developed": "Desenvolvido com React & Material-UI"
+  }
+}

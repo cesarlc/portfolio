@@ -1,12 +1,52 @@
+# Dependencies and generated builds
 node_modules/
+**/node_modules/
 dist/
+**/dist/
+.vite/
+**/.vite/
+*.tsbuildinfo
+.eslintcache
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+
+# Environment files
 .env
 .env.*
 *.local
+
+# Local archives and temporary copies
 *.zip
+index1.html
+
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# OS and editor files
 .DS_Store
 Thumbs.db
+.vscode/
+.idea/
+.vercel/
+.netlify/
+
+# Codex/local tool state
+.codex
+**/.codex
+
+# The root project owns the install and build configuration.
+# Keep juliolemos/index.html and juliolemos/src/** tracked, but ignore
+# the duplicated standalone project files copied with that portfolio.
+juliolemos/.gitignore
+juliolemos/package.json
+juliolemos/package-lock.json
+juliolemos/postcss.config.mjs
+juliolemos/vite.config.ts
+juliolemos/README.md
+juliolemos/ATTRIBUTIONS.md
+juliolemos/guidelines/

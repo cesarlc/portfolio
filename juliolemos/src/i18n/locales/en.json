@@ -1,0 +1,96 @@
+{
+  "header": {
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, my name is",
+    "name": "Julio Lemos",
+    "title": "Mid-Level QA Engineer",
+    "description": "Specialized in manual and automated testing, ensuring quality and reliability of web applications. Experienced with Playwright, Cypress, Selenium, and modern QA tools.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "about": {
+    "title": "About Me",
+    "paragraph1": "I'm a QA Engineer with experience in ensuring web application quality through manual and automated testing. I work with agile methodologies and have a proactive approach to problem identification.",
+    "paragraph2": "My experience includes testing in Banking as a Service (BaaS) environments, integration validation through network log analysis, and development of automated test suites that significantly reduced execution time.",
+    "paragraph3": "I have expertise in JavaScript and Python, as well as experience with modern automation tools and REST APIs. I constantly seek to improve processes and contribute to product stability.",
+    "highlights": {
+      "manual": {
+        "title": "Manual Testing",
+        "description": "Detailed validation of features and user flows"
+      },
+      "automation": {
+        "title": "Test Automation",
+        "description": "Script development with Playwright, Cypress, and Selenium"
+      },
+      "api": {
+        "title": "API Testing",
+        "description": "Integration testing and validation with Postman and Swagger"
+      }
+    }
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "current": "Current",
+    "previous": "Previous Experience",
+    "achievements": "Key Achievements:",
+    "bmp": {
+      "company": "BMP Money Plus",
+      "role": "QA Analyst",
+      "description": "Testing in Banking as a Service (BaaS) environment focused on credit features.",
+      "achievements": [
+        "Manual testing of credit-related features",
+        "Frontend implementation and user flow validation",
+        "Request and response analysis through network logs",
+        "API testing with Postman and Swagger",
+        "Bug identification and improvement suggestions"
+      ]
+    },
+    "sheetgo": {
+      "company": "Sheetgo",
+      "role": "QA Engineer",
+      "description": "Manual and automated testing to ensure software quality.",
+      "achievements": [
+        "Implemented automated tests with significant reduction in execution time",
+        "Proactive defect identification during development",
+        "Effective collaboration with developers for issue resolution"
+      ]
+    }
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "categories": {
+      "automation": "Test Automation",
+      "languages": "Languages",
+      "tools": "Tools & API Testing",
+      "methodologies": "Methodologies & Processes"
+    },
+    "levels": {
+      "basic": "Basic",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    }
+  },
+  "contact": {
+    "title": "Let's Talk?",
+    "description": "I'm always open to new opportunities and collaborations. Get in touch through the platforms below!",
+    "linkedin": {
+      "title": "LinkedIn",
+      "description": "Connect with me on LinkedIn",
+      "button": "View Profile"
+    },
+    "github": {
+      "title": "GitHub",
+      "description": "Check out my projects and contributions",
+      "button": "View GitHub"
+    }
+  },
+  "footer": {
+    "copyright": "© 2026 Julio Lemos - QA Engineer",
+    "developed": "Built with React & Material-UI"
+  }
+}
