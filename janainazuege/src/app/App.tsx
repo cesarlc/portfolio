@@ -181,7 +181,6 @@ export default function App() {
 
   const menuItems = [
     { label: 'Sobre', sectionId: 'sobre' },
-    { label: 'Experiência', sectionId: 'experiencia' },
     { label: 'Portfólio', sectionId: 'portfolio' },
     { label: 'Contato', sectionId: 'contato' },
   ];
@@ -519,124 +518,6 @@ export default function App() {
                 />
               ))}
             </Box>
-          </Container>
-        </Box>
-
-        {/* Experiência Section */}
-        <Box sx={{ py: { xs: 6, md: 8 } }} id="experiencia">
-          <Container maxWidth="lg" sx={{ px: { xs: 2.5, sm: 3 } }}>
-            <Typography variant="h3" gutterBottom sx={sectionTitleSx}>
-              Experiência Profissional
-            </Typography>
-            <Grid container spacing={{ xs: 3, md: 4 }} justifyContent="center">
-              <Grid item xs={12}>
-                <Paper
-                  elevation={0}
-                  sx={{
-                    bgcolor: '#F3DFC1',
-                    maxWidth: 960,
-                    mx: 'auto',
-                    p: { xs: 3.5, sm: 4.5, md: 5 },
-                    textAlign: 'center',
-                    borderRadius: { xs: 3, md: 1 },
-                  }}
-                >
-                    <Typography variant="h4" gutterBottom sx={{ color: 'primary.main', fontWeight: 400, fontSize: { xs: '1.5rem', sm: '2rem' } }}>
-                      PERMANECEREI FESTAS E EVENTOS
-                    </Typography>
-                    <Typography variant="h6" sx={{ color: 'text.secondary', mb: 2 }}>
-                      CEO | Janeiro 2020 - Janeiro 2023
-                    </Typography>
-                    <Typography variant="body1" sx={{ color: 'text.primary', lineHeight: 1.8, mb: 2 }}>
-                      Como CEO da Permanecerei Festas e Eventos, conduzi a criação e execução completa de eventos sociais,
-                      transformando sonhos em realidade através de:
-                    </Typography>
-                    <Box component="ul" sx={{ color: 'text.secondary', lineHeight: 2, pl: { xs: 2, sm: 0 }, pr: { xs: 1, sm: 0 }, listStylePosition: 'outside', textAlign: 'left', maxWidth: 760, mx: 'auto' }}>
-                      <li>
-                        <strong>Organização Completa:</strong> Planejamento detalhado desde o conceito até a execução,
-                        garantindo que cada detalhe esteja perfeitamente alinhado com a visão do cliente
-                      </li>
-                      <li>
-                        <strong>Decoração Personalizada:</strong> Criação de ambientes únicos com paletas de cores
-                        cuidadosamente selecionadas, arranjos florais artesanais e elementos decorativos exclusivos
-                      </li>
-                      <li>
-                        <strong>Branding de Eventos:</strong> Desenvolvimento da identidade visual do evento, incluindo
-                        papelaria personalizada, sinalização e elementos que reforçam o tema escolhido
-                      </li>
-                      <li>
-                        <strong>Gestão de Fornecedores:</strong> Seleção e coordenação de fornecedores de confiança,
-                        negociação de contratos e supervisão da qualidade dos serviços prestados
-                      </li>
-                      <li>
-                        <strong>Montagem e Execução:</strong> Supervisão presencial da montagem e coordenação do evento,
-                        garantindo que tudo ocorra conforme planejado
-                      </li>
-                    </Box>
-                </Paper>
-              </Grid>
-
-              <Grid item xs={12} md={6} sx={{ display: 'flex' }}>
-                <Paper
-                  elevation={0}
-                  sx={{
-                    height: '100%',
-                    width: '100%',
-                    minHeight: { xs: 'auto', sm: 250, md: 320 },
-                    bgcolor: '#F7E3E3',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    p: { xs: 3.5, sm: 4.5 },
-                    textAlign: 'center',
-                    borderRadius: { xs: 3, md: 1 },
-                  }}
-                >
-                  <Box sx={{ width: '100%', maxWidth: 420 }}>
-                    <Typography variant="h6" gutterBottom sx={{ color: 'primary.main' }}>
-                      Jeller Móveis e Decorações
-                    </Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
-                      Auxiliar Administrativa | Ago 2017 - Abr 2018
-                    </Typography>
-                    <Typography variant="body2" sx={{ color: 'text.primary' }}>
-                      Experiência em gestão administrativa, finanças e atendimento ao cliente no setor de móveis e decoração.
-                    </Typography>
-                  </Box>
-                </Paper>
-              </Grid>
-
-              <Grid item xs={12} md={6} sx={{ display: 'flex' }}>
-                <Paper
-                  elevation={0}
-                  sx={{
-                    height: '100%',
-                    width: '100%',
-                    minHeight: { xs: 'auto', sm: 250, md: 320 },
-                    bgcolor: '#FAEFE2',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    p: { xs: 3.5, sm: 4.5 },
-                    textAlign: 'center',
-                    borderRadius: { xs: 3, md: 1 },
-                  }}
-                >
-                  <Box sx={{ width: '100%', maxWidth: 420 }}>
-                    <Typography variant="h6" gutterBottom sx={{ color: 'primary.main' }}>
-                      Caixa Econômica Federal
-                    </Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
-                      Estagiária | Nov 2015 - Dez 2016
-                    </Typography>
-                    <Typography variant="body2" sx={{ color: 'text.primary' }}>
-                      Atendimento ao público, gestão de contratos e documentação, desenvolvendo habilidades em organização e
-                      relacionamento com clientes.
-                    </Typography>
-                  </Box>
-                </Paper>
-              </Grid>
-            </Grid>
           </Container>
         </Box>
 
