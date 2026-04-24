@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Selecionar Portfólio</title>
+    <title>Selecionar Portfolio</title>
     <link rel="icon" type="image/png" href="/icons/logo.png" />
     <style>
       :root {
@@ -113,6 +113,11 @@
         box-shadow: inset 0 0 0 2px #64ffda;
       }
 
+      .portfolio-card:nth-child(3) .portfolio-icon {
+        background: #1b0f06;
+        box-shadow: inset 0 0 0 2px #ffcf64;
+      }
+
       .portfolio-card span {
         color: #c9b8ff;
         font-size: 0.88rem;
@@ -159,25 +164,25 @@
 
   <body>
     <main>
-      <p class="eyebrow">Portfólios disponíveis</p>
+      <p class="eyebrow">Portfolios disponiveis</p>
       <h1>Escolha qual profissional deseja conhecer.</h1>
       <p class="intro">
-        Acesse o portfólio profissional de Cesar Lima Caetano ou Julio Lemos.
+        Acesse o portfolio profissional de Cesar Lima Caetano, Julio Lemos ou Janaina Zuege.
       </p>
 
-      <section class="portfolio-grid" aria-label="Seleção de portfólio">
+      <section class="portfolio-grid" aria-label="Selecao de portfolio">
         <a class="portfolio-card" href="/cesarlcaetano/">
           <div>
             <div class="portfolio-heading">
               <div class="portfolio-icon" aria-hidden="true">CLC</div>
               <div>
-                <span>Agilidade, produto e transformação</span>
+                <span>Agilidade, produto e transformacao</span>
                 <strong>Cesar Lima Caetano</strong>
               </div>
             </div>
-            <p>Experiência em métricas ágeis, liderança de times e melhoria contínua.</p>
+            <p>Experiencia em metricas ageis, lideranca de times e melhoria continua.</p>
           </div>
-          <em>Acessar portfólio</em>
+          <em>Acessar portfolio</em>
         </a>
 
         <a class="portfolio-card" href="/juliolemos/">
@@ -185,13 +190,27 @@
             <div class="portfolio-heading">
               <div class="portfolio-icon" aria-hidden="true">JL</div>
               <div>
-                <span>Estratégia, tecnologia e resultados</span>
+                <span>Estrategia, tecnologia e resultados</span>
                 <strong>Julio Lemos</strong>
               </div>
             </div>
-            <p>Conheça projetos, competências e experiências profissionais.</p>
+            <p>Conheca projetos, competencias e experiencias profissionais.</p>
           </div>
-          <em>Acessar portfólio</em>
+          <em>Acessar portfolio</em>
+        </a>
+
+        <a class="portfolio-card" href="/janainazuege/">
+          <div>
+            <div class="portfolio-heading">
+              <div class="portfolio-icon" aria-hidden="true">JZ</div>
+              <div>
+                <span>Novo espaco em preparacao</span>
+                <strong>Janaina Zuege</strong>
+              </div>
+            </div>
+            <p>Caminho criado no projeto e pronto para receber o portfolio completo.</p>
+          </div>
+          <em>Acessar portfolio</em>
         </a>
       </section>
     </main>

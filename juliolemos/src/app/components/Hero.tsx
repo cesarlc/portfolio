@@ -20,7 +20,7 @@ export function Hero() {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundImage: `url(https://images.unsplash.com/photo-1582224369048-e4d2d7a6ba30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMHRlc3RpbmclMjBjb2RlJTIwcXVhbGl0eSUyMGFzc3VyYW5jZXxlbnwxfHx8fDE3NzYyMDI0ODB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral)`,
+          backgroundImage: `url(https://images.unsplash.com/photo-1582224369048-e4d2d7a6ba30?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMHRlc3RpbmclMjBjb2RlJTIwcXVhbGl0eSUyMGFzc3VyYW5jZXxlbnwxfHx8fDE3NzYyMDI0ODB8MA&ixlib=rb-4.1.0&q=80&w=1080)`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           opacity: 0.1,

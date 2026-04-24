@@ -24,22 +24,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      // Alias @ to the src directory
       '@': path.resolve(__dirname, './src'),
     },
   },
-
-  base: '/',
-  build: {
-    rollupOptions: {
-      input: {
-        home: path.resolve(__dirname, 'index.html'),
-        juliolemos: path.resolve(__dirname, 'juliolemos/index.html'),
-        cesarlcaetano: path.resolve(__dirname, 'cesarlcaetano/index.html'),
-        janainazuege: path.resolve(__dirname, 'janainazuege/index.html'),
-      },
-    },
-  },
-  // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
   assetsInclude: ['**/*.svg', '**/*.csv'],
 })
