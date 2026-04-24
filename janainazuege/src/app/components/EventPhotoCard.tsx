@@ -29,10 +29,10 @@ export function EventPhotoCard({ photo, onClick }: EventPhotoCardProps) {
     >
       <Box
         sx={{
-          height: 300,
+          height: { xs: 210, sm: 250, md: 300 },
           overflow: 'hidden',
           position: 'relative',
-          bgcolor: 'primary.light',
+          bgcolor: 'secondary.light',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
@@ -43,7 +43,7 @@ export function EventPhotoCard({ photo, onClick }: EventPhotoCardProps) {
           <Skeleton
             variant="rectangular"
             width="100%"
-            height={300}
+            height="100%"
             animation="wave"
             sx={{ position: 'absolute', top: 0, left: 0 }}
           />
@@ -53,7 +53,7 @@ export function EventPhotoCard({ photo, onClick }: EventPhotoCardProps) {
           alt={photo.title}
           style={{
             width: '100%',
-            height: '300px',
+            height: '100%',
             objectFit: 'contain',
             objectPosition: 'center',
             opacity: imageLoaded ? 1 : 0,
@@ -62,11 +62,11 @@ export function EventPhotoCard({ photo, onClick }: EventPhotoCardProps) {
           onLoad={() => setImageLoaded(true)}
         />
       </Box>
-      <CardContent>
-        <Typography variant="h6" gutterBottom sx={{ color: 'text.primary' }}>
+      <CardContent sx={{ p: { xs: 2.25, sm: 3 } }}>
+        <Typography variant="h6" gutterBottom sx={{ color: 'text.primary', fontSize: { xs: '1.05rem', sm: '1.25rem' } }}>
           {photo.title}
         </Typography>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+        <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: { xs: '0.92rem', sm: '0.95rem' } }}>
           {photo.description}
         </Typography>
       </CardContent>
